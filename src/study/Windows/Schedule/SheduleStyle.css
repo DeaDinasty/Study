@@ -1,0 +1,180 @@
+.text-field {
+	-fx-border-width: 2;
+	-fx-border-color: black;
+	-fx-background-radius: 20;
+	-fx-border-radius: 20;
+	-fx-pref-height: 30;
+	-fx-font-size: 11;
+	-fx-opacity: 0.8;
+}
+
+.text-field:hover {
+	-fx-border-width: 2;
+	-fx-border-color: #FFD445;
+}
+
+.text-field:focused {
+	-fx-border-width: 2.5;
+	-fx-border-color: black;
+}
+
+#Right:hover {
+	-fx-border-width: 2;
+	-fx-border-color: #E1C5FC;
+}
+
+
+#Right:focused {
+	-fx-border-width: 2;
+	-fx-border-color: #E1C5FC;
+}
+
+#textRed {
+	-fx-border-color: red;
+}
+
+#Monday {
+	-fx-fill: #e31212;
+	-fx-opacity: 0.3;
+}
+
+#Tuesday {
+	/*-fx-fill: derive(#b58110, 65%);*/
+	-fx-fill:
+	    linear-gradient(to right, #e31212, #b58110);
+	-fx-opacity: 0.3;
+}
+
+#Wednesday {
+	/*-fx-fill: derive(#eaff03, 40%);*/
+	-fx-fill:
+	    linear-gradient(to right, #b58110, #eaff03);
+	-fx-opacity: 0.3;
+}
+
+#Thursday {
+	/*-fx-fill: derive(#3cff15, 70%);*/
+	-fx-fill:
+	    linear-gradient(to right, #3cff15, #0a89f7);
+	-fx-opacity: 0.3;
+}
+
+#Friday {
+	/*-fx-fill: derive(#0a89f7, 90%);*/
+	-fx-fill:
+	    linear-gradient(to right, #0a89f7, #f70ad8);
+	-fx-opacity: 0.3;
+}
+
+#Saturday {
+	-fx-fill: derive(#f70ad8, 75%);
+	-fx-opacity: 0.7;
+}
+
+.text-area {
+	-fx-border-radius: 5;
+	-fx-border-color: black;
+	-fx-border-width: 2;
+	-fx-background-radius: 5; 
+	-fx-opacity: 0.8;
+}
+
+.text-area *.text{
+	-fx-text-alignment: center;
+}
+/***********************************************/
+#Page1_2 *.text {
+	-fx-stroke: black;
+	-fx-fill: white;
+	-fx-stroke-width: 3;
+	-fx-stroke-type: outside;
+}
+
+#Page1_2 {
+	-fx-border-radius: 25px;
+	-fx-background-radius: 25px;
+	-fx-background-color: #D29D9D;
+	-fx-border-color: black;
+	-fx-border-width: 3px;
+}
+
+#Page1_2:focused {
+	-fx-opacity: 0.9;
+	-fx-border-width: 4;
+	-fx-background-color:
+	    linear-gradient(#CC8585, #E1E788);
+}
+
+#Page1_2:hover {
+	-fx-opacity: 0.8;
+	-fx-background-color:
+	    linear-gradient(#CC8585, #E1E788);
+}
+
+#Page1_2:pressed {
+	-fx-opacity: 1;
+	-fx-border-width: 5;
+	-fx-background-color:
+	    linear-gradient(#CC8585, #E1E788);
+	-fx-border-style: segments(0, 5, 35, 2);
+}
+/***********************************************/
+#OKCancel *.text {
+	-fx-stroke: black;
+	-fx-fill: #D3BA92;
+	-fx-stroke-width: 3;
+	-fx-stroke-type: outside;
+}
+
+#OKCancel {
+	-fx-border-radius: 25px;
+	-fx-background-radius: 25px;
+	-fx-background-color: #D35955;
+	-fx-border-color: black;
+	-fx-border-width: 3px;
+}
+
+#OKCancel:focused {
+	-fx-opacity: 0.9;
+	-fx-border-width: 4;
+	-fx-background-color:
+	    linear-gradient(#D35955, #7284B1);
+}
+
+#OKCancel:hover {
+	-fx-opacity: 0.8;
+	-fx-background-color:
+	    linear-gradient(#D35955, #7284B1);
+}
+
+#OKCancel:pressed {
+	-fx-opacity: 1;
+	-fx-border-width: 5;
+	-fx-background-color:
+	    linear-gradient(#D35955, #7284B1);
+}
+/***********************************************/
+.choice-box {
+	-fx-background-color: white;
+	-fx-background-radius: 20;
+	-fx-border-radius: 20;
+	-fx-border-width: 2;
+	-fx-border-color: black;
+	-fx-opacity: 0.5;
+}
+
+.choice-box:hover {
+	-fx-opacity: 0.7;
+	-fx-border-color: #FCD7F9;
+}
+
+.choice-box:focused {
+	-fx-opacity: 0.8;
+	-fx-border-color: #8585FF;
+}
+/***********************************************/
+#Numbers:hover {
+	-fx-fill: black;
+	-fx-stroke: white;
+	-fx-opacity: 0.6;
+}

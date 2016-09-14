@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="study.Windows.Hello.HelloController">
+   <children>
+      <ImageView fitHeight="550.0" fitWidth="1280.0" layoutX="-285.0" opacity="0.3" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../res/imageBackground2.jpg" />
+         </image>
+         <effect>
+            <Blend mode="LIGHTEN" />
+         </effect>
+      </ImageView>
+      <Text layoutX="73.0" layoutY="40.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Добро пожаловать!" textAlignment="CENTER" AnchorPane.leftAnchor="65.0" AnchorPane.rightAnchor="65.0" AnchorPane.topAnchor="16.0">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#1f93ff00" height="50.0" layoutX="65.0" layoutY="63.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="270.0" AnchorPane.leftAnchor="65.0" AnchorPane.rightAnchor="65.0" AnchorPane.topAnchor="55.0" />
+      <Text layoutX="73.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Учетные данные не настроены, пожалуйста введите их ниже:" textAlignment="CENTER" wrappingWidth="253.6376953125">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="40.0" arcWidth="40.0" fill="#1f93ff00" height="362.0" layoutX="65.0" layoutY="118.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="270.0" AnchorPane.leftAnchor="65.0" AnchorPane.rightAnchor="67.0" />
+      <GridPane layoutX="75.0" layoutY="128.0" prefHeight="35.0" prefWidth="254.0" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="22.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="118.0" minWidth="10.0" prefWidth="66.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="206.0" minWidth="10.0" prefWidth="194.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="206.0" minWidth="10.0" prefWidth="49.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="Ник:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="nickname" alignment="CENTER" prefHeight="26.0" prefWidth="190.0" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <ImageView fx:id="nickImage" fitHeight="31.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+               <image>
+                  <Image url="@../../res/markBad.png" />
+               </image>
+               <GridPane.margin>
+                  <Insets left="8.0" />
+               </GridPane.margin>
+            </ImageView>
+         </children>
+      </GridPane>
+      <Text layoutX="92.5" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Время начала и конца пар:" AnchorPane.leftAnchor="92.5" AnchorPane.rightAnchor="93.4462890625">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <GridPane layoutX="74.0" layoutY="197.0" prefHeight="207.0" prefWidth="254.0" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="197.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="93.0" minWidth="10.0" prefWidth="66.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="194.0" minWidth="10.0" prefWidth="194.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="192.0" minWidth="10.0" prefWidth="49.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="1 пара:" />
+            <Label layoutX="10.0" layoutY="17.0" text="2 пара:" GridPane.rowIndex="1" />
+            <Label layoutX="10.0" layoutY="47.0" text="3 пара:" GridPane.rowIndex="2" />
+            <Label layoutX="10.0" layoutY="77.0" text="4 пара:" GridPane.rowIndex="3" />
+            <Label layoutX="10.0" layoutY="107.0" text="5 пара:" GridPane.rowIndex="4" />
+            <Label layoutX="10.0" layoutY="137.0" text="6 пара:" GridPane.rowIndex="5" />
+            <Label layoutX="10.0" layoutY="167.0" text="7 пара:" GridPane.rowIndex="6" />
+            <TextField fx:id="les1_1" alignment="CENTER" promptText="9.00" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="5.0" right="100.0" />
+               </GridPane.margin>
+            </TextField>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="-" textAlignment="CENTER" wrappingWidth="8.2" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="90.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <TextField fx:id="les1_2" alignment="CENTER" promptText="10.35" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="100.0" right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="les2_1" alignment="CENTER" layoutX="81.0" layoutY="12.0" promptText="10.45" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="5.0" right="100.0" />
+               </GridPane.margin>
+            </TextField>
+            <Text layoutX="166.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" textAlignment="CENTER" wrappingWidth="8.2" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="90.0" />
+               </GridPane.margin>
+            </Text>
+            <TextField fx:id="les2_2" alignment="CENTER" layoutX="176.0" layoutY="12.0" promptText="12.20" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="100.0" right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="les3_1" alignment="CENTER" layoutX="81.0" layoutY="42.0" promptText="13.00" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="5.0" right="100.0" />
+               </GridPane.margin>
+            </TextField>
+            <Text layoutX="166.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" textAlignment="CENTER" wrappingWidth="8.2" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="90.0" />
+               </GridPane.margin>
+            </Text>
+            <TextField fx:id="les3_2" alignment="CENTER" layoutX="176.0" layoutY="42.0" promptText="14.35" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="100.0" right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="les4_1" alignment="CENTER" layoutX="81.0" layoutY="72.0" promptText="14.45" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="5.0" right="100.0" />
+               </GridPane.margin>
+            </TextField>
+            <Text layoutX="166.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" textAlignment="CENTER" wrappingWidth="8.2" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="90.0" />
+               </GridPane.margin>
+            </Text>
+            <TextField fx:id="les4_2" alignment="CENTER" layoutX="176.0" layoutY="72.0" promptText="16.20" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="100.0" right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="les5_1" alignment="CENTER" layoutX="81.0" layoutY="102.0" promptText="16.30" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="5.0" right="100.0" />
+               </GridPane.margin>
+            </TextField>
+            <Text layoutX="166.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" textAlignment="CENTER" wrappingWidth="8.2" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="90.0" />
+               </GridPane.margin>
+            </Text>
+            <TextField fx:id="les5_2" alignment="CENTER" layoutX="176.0" layoutY="102.0" promptText="18.05" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="100.0" right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="les6_1" alignment="CENTER" layoutX="80.0" layoutY="129.0" promptText="18.15" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="5.0" right="100.0" />
+               </GridPane.margin>
+            </TextField>
+            <Text layoutX="165.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" textAlignment="CENTER" wrappingWidth="8.2" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="90.0" />
+               </GridPane.margin>
+            </Text>
+            <TextField fx:id="les6_2" alignment="CENTER" layoutX="175.0" layoutY="129.0" promptText="19.50" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="100.0" right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="les7_1" alignment="CENTER" layoutX="80.0" layoutY="159.0" promptText="20.00" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets left="5.0" right="100.0" />
+               </GridPane.margin>
+            </TextField>
+            <Text layoutX="165.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" textAlignment="CENTER" wrappingWidth="8.2" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="90.0" />
+               </GridPane.margin>
+            </Text>
+            <TextField fx:id="les7_2" alignment="CENTER" layoutX="175.0" layoutY="159.0" promptText="21.35" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets left="100.0" right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <ImageView fx:id="lesImage1" fitHeight="31.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets left="8.0" />
+               </GridPane.margin>
+               <image>
+                  <Image url="@../../res/markGood.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="lesImage2" fitHeight="31.0" fitWidth="56.0" layoutX="275.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@../../res/markGood.png" />
+               </image>
+               <GridPane.margin>
+                  <Insets left="8.0" />
+               </GridPane.margin>
+            </ImageView>
+            <ImageView fx:id="lesImage3" fitHeight="31.0" fitWidth="56.0" layoutX="275.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@../../res/markGood.png" />
+               </image>
+               <GridPane.margin>
+                  <Insets left="8.0" />
+               </GridPane.margin>
+            </ImageView>
+            <ImageView fx:id="lesImage4" fitHeight="31.0" fitWidth="56.0" layoutX="275.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <image>
+                  <Image url="@../../res/markGood.png" />
+               </image>
+               <GridPane.margin>
+                  <Insets left="8.0" />
+               </GridPane.margin>
+            </ImageView>
+            <ImageView fx:id="lesImage5" fitHeight="31.0" fitWidth="56.0" layoutX="275.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <image>
+                  <Image url="@../../res/markGood.png" />
+               </image>
+               <GridPane.margin>
+                  <Insets left="8.0" />
+               </GridPane.margin>
+            </ImageView>
+            <ImageView fx:id="lesImage6" fitHeight="31.0" fitWidth="56.0" layoutX="275.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <image>
+                  <Image url="@../../res/markGood.png" />
+               </image>
+               <GridPane.margin>
+                  <Insets left="8.0" />
+               </GridPane.margin>
+            </ImageView>
+            <ImageView fx:id="lesImage7" fitHeight="31.0" fitWidth="56.0" layoutX="275.0" layoutY="157.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="6">
+               <image>
+                  <Image url="@../../res/markGood.png" />
+               </image>
+               <GridPane.margin>
+                  <Insets left="8.0" />
+               </GridPane.margin>
+            </ImageView>
+         </children>
+      </GridPane>
+      <Button fx:id="schedule" layoutX="146.0" layoutY="446.0" mnemonicParsing="false" onAction="#goShed" text="Расписание" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" />
+      <Text layoutX="93.0" layoutY="418.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Настройте расписание сейчас или позже:" textAlignment="CENTER" wrappingWidth="215.05371202528477" AnchorPane.leftAnchor="93.0" AnchorPane.rightAnchor="93.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Button fx:id="next" disable="true" layoutX="151.0" layoutY="491.0" mnemonicParsing="false" text="Продолжить" AnchorPane.leftAnchor="145.0" AnchorPane.rightAnchor="145.0" />
+   </children>
+   <effect>
+      <Blend mode="MULTIPLY" />
+   </effect>
+</AnchorPane>

@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" stylesheets="@SheduleStyle.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="study.Windows.Schedule.ScheduleController">
+   <children>
+      <ImageView fitHeight="800.0" fitWidth="1400.0" layoutX="-41.0" layoutY="-101.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../res/imageBackground1.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="40.0" arcWidth="40.0" height="35.0" layoutX="115.0" layoutY="49.0" opacity="0.9" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="147.0">
+         <fill>
+            <RadialGradient centerX="0.4887640449438202" centerY="0.5625" radius="0.7857142857142857">
+               <stops>
+                  <Stop color="#e3121299" />
+                  <Stop color="#e0161600" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill></Rectangle>
+      <Rectangle arcHeight="40.0" arcWidth="40.0" height="35.0" layoutX="261.0" layoutY="49.0" opacity="0.9" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="147.0">
+         <fill>
+            <RadialGradient centerX="0.4887640449438202" centerY="0.5625" radius="0.8571428571428572">
+               <stops>
+                  <Stop color="#b27f10cc" />
+                  <Stop color="#b27f1000" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill></Rectangle>
+      <Rectangle arcHeight="40.0" arcWidth="40.0" height="35.0" layoutX="407.0" layoutY="49.0" opacity="0.9" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="147.0">
+         <fill>
+            <RadialGradient centerX="0.4887640449438202" centerY="0.47596153846153844" radius="0.9166666666666666">
+               <stops>
+                  <Stop color="#eeff05b2" />
+                  <Stop color="#b27f1000" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill></Rectangle>
+      <Rectangle arcHeight="40.0" arcWidth="40.0" height="35.0" layoutX="553.0" layoutY="49.0" opacity="0.9" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="147.0">
+         <fill>
+            <RadialGradient centerX="0.4887640449438202" centerY="0.47596153846153844" radius="0.7023809523809523">
+               <stops>
+                  <Stop color="#3eff1799" />
+                  <Stop color="#b27f1000" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill></Rectangle>
+      <Rectangle arcHeight="40.0" arcWidth="40.0" height="35.0" layoutX="699.0" layoutY="49.0" opacity="0.9" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="147.0">
+         <fill>
+            <RadialGradient centerX="0.4887640449438202" centerY="0.47596153846153844" radius="0.7261904761904762">
+               <stops>
+                  <Stop color="#0c8cf580" />
+                  <Stop color="#b27f1000" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill></Rectangle>
+      <Rectangle arcHeight="40.0" arcWidth="40.0" height="35.0" layoutX="845.0" layoutY="49.0" opacity="0.9" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="147.0">
+         <fill>
+            <RadialGradient centerX="0.4887640449438202" centerY="0.47596153846153844" radius="0.7857142857142857">
+               <stops>
+                  <Stop color="#f70ad880" />
+                  <Stop color="#b27f1000" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill></Rectangle>
+      <Text layoutX="140.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Понедельник">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Text>
+      <Text layoutX="305.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Вторник">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Text>
+      <Text layoutX="459.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Среда">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Text>
+      <Text layoutX="599.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Четверг">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Text>
+      <Text layoutX="744.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Пятница">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Text>
+      <Text layoutX="890.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Суббота">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Text>
+      <Rectangle arcHeight="40.0" arcWidth="40.0" height="373.0" layoutX="991.0" layoutY="83.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="184.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="0.43269230769230765" startY="0.46634615384615385">
+               <stops>
+                  <Stop color="#f0379d33" />
+                  <Stop color="#f0379d33" offset="0.007407407407407408" />
+                  <Stop color="#80978833" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill></Rectangle>
+      <Rectangle arcHeight="40.0" arcWidth="40.0" fill="#783eab33" height="88.0" layoutX="991.0" layoutY="461.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="184.0" />
+      <Rectangle arcHeight="40.0" arcWidth="40.0" height="373.0" layoutX="57.0" layoutY="83.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="58.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="0.4423076923076923" startY="0.44711538461538464">
+               <stops>
+                  <Stop color="#3e60bd33" />
+                  <Stop color="#e3141433" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill></Rectangle>
+      <Rectangle id="Monday" arcHeight="40.0" arcWidth="40.0" fill="#e312124d" height="63.0" layoutX="115.0" layoutY="83.0" stroke="BLACK" strokeLineCap="BUTT" strokeType="INSIDE" width="147.0" />
+      <TextField fx:id="lesson_0_0" alignment="CENTER" layoutX="129.0" layoutY="85.0" opacity="0.7" prefHeight="26.0" prefWidth="121.0" promptText="Предмет" />
+      <TextField fx:id="lesson_1_0" alignment="CENTER" layoutX="129.0" layoutY="114.0" prefHeight="26.0" prefWidth="121.0" promptText="Недели" />
+      <Rectangle id="Tuesday" arcHeight="40.0" arcWidth="40.0" fill="#b581104d" height="63.0" layoutX="261.0" layoutY="83.0" stroke="BLACK" strokeType="INSIDE" width="147.0" />
+      <TextField fx:id="lesson_0_1" alignment="CENTER" layoutX="275.0" layoutY="85.0" opacity="0.7" prefHeight="26.0" prefWidth="121.0" promptText="Предмет" />
+      <TextField fx:id="lesson_1_1" alignment="CENTER" layoutX="275.0" layoutY="114.0" prefHeight="26.0" prefWidth="121.0" promptText="Недели" />
+      <Rectangle id="Wednesday" arcHeight="40.0" arcWidth="40.0" fill="#eaff034d" height="63.0" layoutX="407.0" layoutY="83.0" stroke="BLACK" strokeType="INSIDE" width="147.0" />
+      <TextField fx:id="lesson_0_2" alignment="CENTER" layoutX="421.0" layoutY="85.0" prefHeight="26.0" prefWidth="121.0" promptText="Предмет" />
+      <TextField fx:id="lesson_1_2" alignment="CENTER" layoutX="421.0" layoutY="114.0" prefHeight="26.0" prefWidth="121.0" promptText="Недели" />
+      <Rectangle id="Thursday" arcHeight="40.0" arcWidth="40.0" fill="#3cff154d" height="63.0" layoutX="553.0" layoutY="83.0" stroke="BLACK" strokeType="INSIDE" width="147.0" />
+      <TextField fx:id="lesson_0_3" alignment="CENTER" layoutX="567.0" layoutY="85.0" prefHeight="26.0" prefWidth="121.0" promptText="Предмет" />
+      <TextField fx:id="lesson_1_3" alignment="CENTER" layoutX="567.0" layoutY="114.0" prefHeight="26.0" prefWidth="121.0" promptText="Недели" />
+      <Rectangle id="Friday" arcHeight="40.0" arcWidth="40.0" fill="#0a89f74d" height="63.0" layoutX="699.0" layoutY="83.0" stroke="BLACK" strokeType="INSIDE" width="147.0" />
+      <TextField fx:id="lesson_0_4" alignment="CENTER" layoutX="713.0" layoutY="85.0" prefHeight="26.0" prefWidth="121.0" promptText="Предмет" />
+      <TextField fx:id="lesson_1_4" alignment="CENTER" layoutX="713.0" layoutY="114.0" prefHeight="26.0" prefWidth="121.0" promptText="Недели" />
+      <Rectangle id="Saturday" arcHeight="40.0" arcWidth="40.0" fill="#f70ad84d" height="63.0" layoutX="845.0" layoutY="83.0" stroke="BLACK" strokeType="INSIDE" width="147.0" />
+      <TextField fx:id="lesson_0_5" alignment="CENTER" layoutX="859.0" layoutY="85.0" prefHeight="26.0" prefWidth="121.0" promptText="Предмет" />
+      <TextField fx:id="lesson_1_5" alignment="CENTER" layoutX="859.0" layoutY="114.0" prefHeight="26.0" prefWidth="121.0" promptText="Недели" />
+      <Rectangle id="Monday" arcHeight="40.0" arcWidth="40.0" fill="#e312124d" height="63.0" layoutX="115.0" layoutY="145.0" stroke="BLACK" strokeType="INSIDE" width="147.0" />
+      <TextField fx:id="lesson_2_0" alignment="CENTER" layoutX="129.0" layoutY="147.0" prefHeight="26.0" prefWidth="121.0" promptText="Предмет" />
+      <TextField fx:id="lesson_3_0" alignment="CENTER" layoutX="129.0" layoutY="176.0" prefHeight="26.0" prefWidth="121.0" promptText="Недели" />
+      <Rectangle id="Tuesday" arcHeight="40.0" arcWidth="40.0" fill="#b581104d" height="63.0" layoutX="261.0" layoutY="145.0" stroke="BLACK" strokeType="INSIDE" width="147.0" />
+      <TextField fx:id="lesson_2_1" alignment="CENTER" layoutX="275.0" layoutY="147.0" prefHeight="26.0" prefWidth="121.0" promptText="Предмет" />
+      <TextField fx:id="lesson_3_1" alignment="CENTER" layoutX="275.0" layoutY="176.0" prefHeight="26.0" prefWidth="121.0" promptText="Недели" />
+      <Rectangle id="Wednesday" arcHeight="40.0" arcWidth="40.0" fill="#eaff034d" height="63.0" layoutX="407.0" layoutY="145.0" stroke="BLACK" strokeType="INSIDE" width="147.0" />
+      <TextField fx:id="lesson_2_2" alignment="CENTER" layoutX="421.0" layoutY="147.0" prefHeight="26.0" prefWidth="121.0" promptText="Предмет" />
+      <TextField fx:id="lesson_3_2" alignment="CENTER" layoutX="421.0" layoutY="176.0" prefHeight="26.0" prefWidth="121.0" promptText="Недели" />
+      <Rectangle id="Thursday" arcHeight="40.0" arcWidth="40.0" fill="#3cff154d" height="63.0" layoutX="553.0" layoutY="145.0" stroke="BLACK" strokeType="INSIDE" width="147.0" />
+      <TextField fx:id="lesson_2_3" alignment="CENTER" layoutX="567.0" layoutY="147.0" prefHeight="26.0" prefWidth="121.0" promptText="Предмет" />
+      <TextField fx:id="lesson_3_3" alignment="CENTER" layoutX="567.0" layoutY="176.0" prefHeight="26.0" prefWidth="121.0" promptText="Недели" />
+      <Rectangle id="Friday" arcHeight="40.0" arcWidth="40.0" fill="#0a89f74d" height="63.0" layoutX="699.0" layoutY="145.0" stroke="BLACK" strokeType="INSIDE" width="147.0" />
+      <TextField fx:id="lesson_2_4" alignment="CENTER" layoutX="713.0" layoutY="147.0" prefHeight="26.0" prefWidth="121.0" promptText="Предмет" />
+      <TextField fx:id="lesson_3_4" alignment="CENTER" layoutX="713.0" layoutY="176.0" prefHeight="26.0" prefWidth="121.0" promptText="Недели" />
+      <Rectangle id="Saturday" arcHeight="40.0" arcWidth="40.0" fill="#f70ad84d" height="63.0" layoutX="845.0" layoutY="145.0" stroke="BLACK" strokeType="INSIDE" width="147.0" />
+      <TextField fx:id="lesson_2_5" alignment="CENTER" layoutX="859.0" layoutY="147.0" prefHeight="26.0" prefWidth="121.0" promptText="Предмет" />
+      <TextField fx:id="lesson_3_5" alignment="CENTER" layoutX="859.0" layoutY="176.0" prefHeight="26.0" prefWidth="121.0" promptText="Недели" />
+      <Rectangle id="Monday" arcHeight="40.0" arcWidth="40.0" fill="#e312124d" height="63.0" layoutX="115.0" layoutY="207.0" stroke="BLACK" strokeType="INSIDE" width="147.0" />
+      <TextField fx:id="lesson_4_0" alignment="CENTER" layoutX="129.0" layoutY="209.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="121.0" promptText="Предмет">
+         <font>
+            <Font size="11.0" />
+         </font></TextField>
+      <TextField fx:id="lesson_5_0" alignment="CENTER" layoutX="129.0" layoutY="238.0" prefHeight="30.0" prefWidth="121.0" promptText="Недели">
+         <font>
+            <Font size="11.0" />
+         </font></TextField>
+      <Rectangle id="Tuesday" arcHeight="40.0" arcWidth="40.0" fill="#b581104d" height="63.0" layoutX="261.0" layoutY="207.0" stroke="BLACK" strokeType="INSIDE" width="147.0" />
+      <TextField fx:id="lesson_4_1" alignment="CENTER" layoutX="275.0" layoutY="209.0" prefHeight="26.0" prefWidth="121.0" promptText="Предмет" />
+      <TextField fx:id="lesson_5_1" alignment="CENTER" layoutX="275.0" layoutY="238.0" prefHeight="26.0" prefWidth="121.0" promptText="Недели" />
+      <Rectangle id="Wednesday" arcHeight="40.0" arcWidth="40.0" fill="#eaff034d" height="63.0" layoutX="407.0" layoutY="207.0" stroke="BLACK" strokeType="INSIDE" width="147.0" />
+      <TextField fx:id="lesson_4_2" alignment="CENTER" layoutX="421.0" layoutY="209.0" prefHeight="26.0" prefWidth="121.0" promptText="Предмет" />
+      <TextField fx:id="lesson_5_2" alignment="CENTER" layoutX="421.0" layoutY="238.0" prefHeight="26.0" prefWidth="121.0" promptText="Недели" />
+      <Rectangle id="Thursday" arcHeight="40.0" arcWidth="40.0" fill="#3cff154d" height="63.0" layoutX="553.0" layoutY="207.0" stroke="BLACK" strokeType="INSIDE" width="147.0" />
+      <TextField fx:id="lesson_4_3" alignment="CENTER" layoutX="567.0" layoutY="209.0" prefHeight="26.0" prefWidth="121.0" promptText="Предмет" />
+      <TextField fx:id="lesson_5_3" alignment="CENTER" layoutX="567.0" layoutY="238.0" prefHeight="26.0" prefWidth="121.0" promptText="Недели" />
+      <Rectangle id="Friday" arcHeight="40.0" arcWidth="40.0" fill="#0a89f74d" height="63.0" layoutX="699.0" layoutY="207.0" stroke="BLACK" strokeType="INSIDE" width="147.0" />
+      <TextField fx:id="lesson_4_4" alignment="CENTER" layoutX="713.0" layoutY="209.0" prefHeight="26.0" prefWidth="121.0" promptText="Предмет" />
+      <TextField fx:id="lesson_5_4" alignment="CENTER" layoutX="713.0" layoutY="238.0" prefHeight="26.0" prefWidth="121.0" promptText="Недели" />
+      <Rectangle id="Saturday" arcHeight="40.0" arcWidth="40.0" fill="#f70ad84d" height="63.0" layoutX="845.0" layoutY="207.0" stroke="BLACK" strokeType="INSIDE" width="147.0" />
+      <TextField fx:id="lesson_4_5" alignment="CENTER" layoutX="859.0" layoutY="209.0" prefHeight="26.0" prefWidth="121.0" promptText="Предмет" />
+      <TextField fx:id="lesson_5_5" alignment="CENTER" layoutX="859.0" layoutY="238.0" prefHeight="26.0" prefWidth="121.0" promptText="Недели" />
+      <Rectangle id="Monday" arcHeight="40.0" arcWidth="40.0" fill="#e312124d" height="63.0" layoutX="115.0" layoutY="269.0" stroke="BLACK" strokeType="INSIDE" width="147.0" />
+      <TextField fx:id="lesson_6_0" alignment="CENTER" layoutX="129.0" layoutY="271.0" prefHeight="26.0" prefWidth="121.0" promptText="Предмет" />
+      <TextField fx:id="lesson_7_0" alignment="CENTER" layoutX="129.0" layoutY="300.0" prefHeight="26.0" prefWidth="121.0" promptText="Недели" />
+      <Rectangle id="Tuesday" arcHeight="40.0" arcWidth="40.0" fill="#b581104d" height="63.0" layoutX="261.0" layoutY="269.0" stroke="BLACK" strokeType="INSIDE" width="147.0" />
+      <TextField fx:id="lesson_6_1" alignment="CENTER" layoutX="275.0" layoutY="271.0" prefHeight="26.0" prefWidth="121.0" promptText="Предмет" />
+      <TextField fx:id="lesson_7_1" alignment="CENTER" layoutX="275.0" layoutY="300.0" prefHeight="26.0" prefWidth="121.0" promptText="Недели" />
+      <Rectangle id="Wednesday" arcHeight="40.0" arcWidth="40.0" fill="#eaff034d" height="63.0" layoutX="407.0" layoutY="269.0" stroke="BLACK" strokeType="INSIDE" width="147.0" />
+      <TextField fx:id="lesson_6_2" alignment="CENTER" layoutX="421.0" layoutY="271.0" prefHeight="26.0" prefWidth="121.0" promptText="Предмет" />
+      <TextField fx:id="lesson_7_2" alignment="CENTER" layoutX="421.0" layoutY="300.0" prefHeight="26.0" prefWidth="121.0" promptText="Недели" />
+      <Rectangle id="Thursday" arcHeight="40.0" arcWidth="40.0" fill="#3cff154d" height="63.0" layoutX="553.0" layoutY="269.0" stroke="BLACK" strokeType="INSIDE" width="147.0" />
+      <TextField fx:id="lesson_6_3" alignment="CENTER" layoutX="567.0" layoutY="271.0" prefHeight="26.0" prefWidth="121.0" promptText="Предмет" />
+      <TextField fx:id="lesson_7_3" alignment="CENTER" layoutX="567.0" layoutY="300.0" prefHeight="26.0" prefWidth="121.0" promptText="Недели" />
+      <Rectangle id="Friday" arcHeight="40.0" arcWidth="40.0" fill="#0a89f74d" height="63.0" layoutX="699.0" layoutY="269.0" stroke="BLACK" strokeType="INSIDE" width="147.0" />
+      <TextField fx:id="lesson_6_4" alignment="CENTER" layoutX="713.0" layoutY="271.0" prefHeight="26.0" prefWidth="121.0" promptText="Предмет" />
+      <TextField fx:id="lesson_7_4" alignment="CENTER" layoutX="713.0" layoutY="300.0" prefHeight="26.0" prefWidth="121.0" promptText="Недели" />
+      <Rectangle id="Saturday" arcHeight="40.0" arcWidth="40.0" fill="#f70ad84d" height="63.0" layoutX="845.0" layoutY="269.0" stroke="BLACK" strokeType="INSIDE" width="147.0" />
+      <TextField fx:id="lesson_6_5" alignment="CENTER" layoutX="859.0" layoutY="271.0" prefHeight="26.0" prefWidth="121.0" promptText="Предмет" />
+      <TextField fx:id="lesson_7_5" alignment="CENTER" layoutX="859.0" layoutY="300.0" prefHeight="26.0" prefWidth="121.0" promptText="Недели" />
+      <Rectangle id="Monday" arcHeight="40.0" arcWidth="40.0" fill="#e312124d" height="63.0" layoutX="115.0" layoutY="331.0" stroke="BLACK" strokeType="INSIDE" width="147.0" />
+      <TextField fx:id="lesson_8_0" alignment="CENTER" layoutX="129.0" layoutY="333.0" prefHeight="26.0" prefWidth="121.0" promptText="Предмет" />
+      <TextField fx:id="lesson_9_0" alignment="CENTER" layoutX="129.0" layoutY="362.0" prefHeight="26.0" prefWidth="121.0" promptText="Недели" />
+      <Rectangle id="Tuesday" arcHeight="40.0" arcWidth="40.0" fill="#b581104d" height="63.0" layoutX="261.0" layoutY="331.0" stroke="BLACK" strokeType="INSIDE" width="147.0" />
+      <TextField fx:id="lesson_8_1" alignment="CENTER" layoutX="275.0" layoutY="333.0" prefHeight="26.0" prefWidth="121.0" promptText="Предмет" />
+      <TextField fx:id="lesson_9_1" alignment="CENTER" layoutX="275.0" layoutY="362.0" prefHeight="26.0" prefWidth="121.0" promptText="Недели" />
+      <Rectangle id="Wednesday" arcHeight="40.0" arcWidth="40.0" fill="#eaff034d" height="63.0" layoutX="407.0" layoutY="331.0" stroke="BLACK" strokeType="INSIDE" width="147.0" />
+      <TextField fx:id="lesson_8_2" alignment="CENTER" layoutX="421.0" layoutY="333.0" prefHeight="26.0" prefWidth="121.0" promptText="Предмет" />
+      <TextField fx:id="lesson_9_2" alignment="CENTER" layoutX="421.0" layoutY="362.0" prefHeight="26.0" prefWidth="121.0" promptText="Недели" />
+      <Rectangle id="Thursday" arcHeight="40.0" arcWidth="40.0" fill="#3cff154d" height="63.0" layoutX="553.0" layoutY="331.0" stroke="BLACK" strokeType="INSIDE" width="147.0" />
+      <TextField fx:id="lesson_8_3" alignment="CENTER" layoutX="567.0" layoutY="333.0" prefHeight="26.0" prefWidth="121.0" promptText="Предмет" />
+      <TextField fx:id="lesson_9_3" alignment="CENTER" layoutX="567.0" layoutY="362.0" prefHeight="26.0" prefWidth="121.0" promptText="Недели" />
+      <Rectangle id="Friday" arcHeight="40.0" arcWidth="40.0" fill="#0a89f74d" height="63.0" layoutX="699.0" layoutY="331.0" stroke="BLACK" strokeType="INSIDE" width="147.0" />
+      <TextField fx:id="lesson_8_4" alignment="CENTER" layoutX="713.0" layoutY="333.0" prefHeight="26.0" prefWidth="121.0" promptText="Предмет" />
+      <TextField fx:id="lesson_9_4" alignment="CENTER" layoutX="713.0" layoutY="362.0" prefHeight="26.0" prefWidth="121.0" promptText="Недели" />
+      <Rectangle id="Saturday" arcHeight="40.0" arcWidth="40.0" fill="#f70ad84d" height="63.0" layoutX="845.0" layoutY="331.0" stroke="BLACK" strokeType="INSIDE" width="147.0" />
+      <TextField fx:id="lesson_8_5" alignment="CENTER" layoutX="859.0" layoutY="333.0" prefHeight="26.0" prefWidth="121.0" promptText="Предмет" />
+      <TextField fx:id="lesson_9_5" alignment="CENTER" layoutX="859.0" layoutY="362.0" prefHeight="26.0" prefWidth="121.0" promptText="Недели" />
+      <Rectangle id="Monday" arcHeight="40.0" arcWidth="40.0" fill="#e312124d" height="63.0" layoutX="115.0" layoutY="393.0" stroke="BLACK" strokeType="INSIDE" width="147.0" />
+      <TextField fx:id="lesson_10_0" alignment="CENTER" layoutX="129.0" layoutY="395.0" prefHeight="26.0" prefWidth="121.0" promptText="Предмет" />
+      <TextField fx:id="lesson_11_0" alignment="CENTER" layoutX="129.0" layoutY="424.0" prefHeight="26.0" prefWidth="121.0" promptText="Недели" />
+      <Rectangle id="Tuesday" arcHeight="40.0" arcWidth="40.0" fill="#b581104d" height="63.0" layoutX="261.0" layoutY="393.0" stroke="BLACK" strokeType="INSIDE" width="147.0" />
+      <TextField fx:id="lesson_10_1" alignment="CENTER" layoutX="275.0" layoutY="395.0" prefHeight="26.0" prefWidth="121.0" promptText="Предмет" />
+      <TextField fx:id="lesson_11_1" alignment="CENTER" layoutX="275.0" layoutY="424.0" prefHeight="26.0" prefWidth="121.0" promptText="Недели" />
+      <Rectangle id="Wednesday" arcHeight="40.0" arcWidth="40.0" fill="#eaff034d" height="63.0" layoutX="407.0" layoutY="393.0" stroke="BLACK" strokeType="INSIDE" width="147.0" />
+      <TextField fx:id="lesson_10_2" alignment="CENTER" layoutX="421.0" layoutY="395.0" prefHeight="26.0" prefWidth="121.0" promptText="Предмет" />
+      <TextField fx:id="lesson_11_2" alignment="CENTER" layoutX="421.0" layoutY="424.0" prefHeight="26.0" prefWidth="121.0" promptText="Недели" />
+      <Rectangle id="Thursday" arcHeight="40.0" arcWidth="40.0" fill="#3cff154d" height="63.0" layoutX="553.0" layoutY="393.0" stroke="BLACK" strokeType="INSIDE" width="147.0" />
+      <TextField fx:id="lesson_10_3" alignment="CENTER" layoutX="567.0" layoutY="395.0" prefHeight="26.0" prefWidth="121.0" promptText="Предмет" />
+      <TextField fx:id="lesson_11_3" alignment="CENTER" layoutX="567.0" layoutY="424.0" prefHeight="26.0" prefWidth="121.0" promptText="Недели" />
+      <Rectangle id="Friday" arcHeight="40.0" arcWidth="40.0" fill="#0a89f74d" height="63.0" layoutX="699.0" layoutY="393.0" stroke="BLACK" strokeType="INSIDE" width="147.0" />
+      <TextField fx:id="lesson_10_4" alignment="CENTER" layoutX="713.0" layoutY="395.0" prefHeight="26.0" prefWidth="121.0" promptText="Предмет" />
+      <TextField fx:id="lesson_11_4" alignment="CENTER" layoutX="713.0" layoutY="424.0" prefHeight="26.0" prefWidth="121.0" promptText="Недели" />
+      <Rectangle id="Saturday" arcHeight="40.0" arcWidth="40.0" fill="#f70ad84d" height="63.0" layoutX="845.0" layoutY="393.0" stroke="BLACK" strokeType="INSIDE" width="147.0" />
+      <TextField fx:id="lesson_10_5" alignment="CENTER" layoutX="859.0" layoutY="395.0" prefHeight="26.0" prefWidth="121.0" promptText="Предмет" />
+      <TextField fx:id="lesson_11_5" alignment="CENTER" layoutX="859.0" layoutY="424.0" prefHeight="26.0" prefWidth="121.0" promptText="Недели" />
+      <GridPane layoutX="992.0" layoutY="86.0" prefHeight="454.0" prefWidth="182.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="54.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Предмет" GridPane.halignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <TextField id="Right" fx:id="mainLesson" alignment="CENTER" editable="false" prefHeight="30.0" prefWidth="168.0" promptText="Предмет" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="20.0" right="20.0" />
+               </GridPane.margin>
+            </TextField>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Полное название" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <TextArea id="Right" fx:id="fullName" accessibleRole="TEXT_FIELD" prefHeight="63.0" prefWidth="142.0" promptText="Полное название предмета" wrapText="true" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+               </GridPane.margin>
+            </TextArea>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Тип занятия" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <ChoiceBox fx:id="typeOfLesson" opacity="0.55" prefWidth="150.0" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="20.0" right="20.0" />
+               </GridPane.margin>
+            </ChoiceBox>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Имя учителя" GridPane.halignment="CENTER" GridPane.rowIndex="6">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <TextField id="Right" alignment="CENTER" promptText="Ф.И.О." GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Кабинет" GridPane.halignment="CENTER" GridPane.rowIndex="8">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets top="10.0" />
+               </GridPane.margin>
+            </Text>
+            <TextField id="Right" alignment="CENTER" prefHeight="30.0" prefWidth="168.0" promptText="228/1" GridPane.rowIndex="9">
+               <GridPane.margin>
+                  <Insets left="30.0" right="30.0" />
+               </GridPane.margin>
+            </TextField>
+         </children>
+      </GridPane>
+      <Text id="Numbers" fill="WHITE" layoutX="78.0" layoutY="122.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="3.0" text="1" AnchorPane.leftAnchor="78.0">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Text>
+      <Text id="Numbers" fill="WHITE" layoutX="78.0" layoutY="185.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="3.0" text="2">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Text>
+      <Text id="Numbers" fill="WHITE" layoutX="78.0" layoutY="247.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="3.0" text="3">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Text>
+      <Text id="Numbers" fill="WHITE" layoutX="78.0" layoutY="309.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="3.0" text="4">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Text>
+      <Text id="Numbers" fill="WHITE" layoutX="78.0" layoutY="371.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="3.0" text="5">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Text>
+      <Text id="Numbers" fill="WHITE" layoutX="78.0" layoutY="433.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="3.0" text="6">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#2197ff33" height="249.0" layoutX="8.0" layoutY="145.0" stroke="BLACK" strokeType="INSIDE" width="47.0" />
+      <Text layoutX="-53.0" layoutY="274.0" rotate="270.0" stroke="#0000003b" strokeType="OUTSIDE" strokeWidth="0.0" text="Нечетная неделя">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="50.0" arcWidth="50.0" height="69.0" layoutX="423.0" layoutY="457.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="260.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#e5f53333" />
+                  <Stop color="#16de5f33" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Button id="OKCancel" layoutX="16.0" layoutY="532.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="54.0" prefWidth="141.0" text="Отмена">
+         <font>
+            <Font size="25.0" />
+         </font></Button>
+      <Button id="OKCancel" alignment="CENTER" contentDisplay="CENTER" layoutX="516.0" layoutY="531.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" opacity="0.7" prefHeight="55.0" prefWidth="77.0" text="OK">
+         <font>
+            <Font size="25.0" />
+         </font></Button>
+      <Button id="Page1_2" alignment="CENTER" disable="true" layoutX="438.0" layoutY="464.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" opacity="0.7" prefHeight="55.0" prefWidth="110.0" text=" &lt; &lt; " textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Button>
+      <Button id="Page1_2" alignment="CENTER" layoutX="558.0" layoutY="464.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" opacity="0.7" prefHeight="55.0" prefWidth="110.0" text="&gt; &gt;" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Button>
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#ffff2199" height="135.0" layoutX="706.0" layoutY="460.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="4.0" width="280.0" />
+      <Text layoutX="801.0" layoutY="483.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Важно!!!">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#c6c6c6" height="135.0" layoutX="174.0" layoutY="460.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="4.0" width="226.0" />
+      <Text layoutX="243.0" layoutY="482.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Важно!!!">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Text>
+      <ImageView blendMode="SRC_ATOP" fitHeight="98.0" fitWidth="204.0" layoutX="198.0" layoutY="491.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../res/podskazka1.jpg" />
+         </image>
+      </ImageView>
+      <Text layoutX="714.0" layoutY="499.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Недели заполняются в виде промежутка через &quot;-&quot; и/или отдельных дней.          Для нечетной недели запись &quot;2-6&quot; еквивалента &quot;3, 5&quot; или &quot;3-5&quot; т.е. берутся только нечетные номера!                       Но &quot;2-6, 4&quot; или &quot;3-5, 4&quot;= &quot;3, 5, 4&quot;!             Для четной наоборот!" textAlignment="CENTER" wrappingWidth="265.0">
+         <font>
+            <Font size="12.0" />
+         </font></Text>
+      <Line endX="120.0" layoutX="278.0" layoutY="489.0" startX="-100.0" strokeWidth="3.0" />
+   </children>
+</AnchorPane>
