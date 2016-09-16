@@ -1,16 +1,15 @@
 package study.Windows.Schedule;
 
-import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Control;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.StringJoiner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -165,11 +164,17 @@ public class ScheduleController implements Initializable {
     ChoiceBox typeOfLesson;
     @FXML
     TextArea fullName;
+    @FXML
+    TextField teacherName;
+    @FXML
+    TextField cabinet;
 
     ////////////////////
     private TextField[][] lessons = new TextField[12][6]; //[0-5][0-5] = lesson; [6-11][0-5] = weeks;
-    private String[][][] lessonsInfo = new String[36][4][1];
-    private void getLessonsArray() {
+    private Control[] lesInfoBar = new Control[4];
+
+    private String[][][][] lessonsInfo = new String[2][6][6][4]; //page-day-dayOfWeek-info
+    private void getLessonsArrays() {
         lessons[0][0] = lesson_0_0;
         lessons[0][1] = lesson_0_1;
         lessons[0][2] = lesson_0_2;
@@ -242,8 +247,12 @@ public class ScheduleController implements Initializable {
         lessons[11][3] = lesson_11_3;
         lessons[11][4] = lesson_11_4;
         lessons[11][5] = lesson_11_5;
-    }
 
+        lesInfoBar[0] = fullName;
+        lesInfoBar[1] = typeOfLesson;
+        lesInfoBar[2] = teacherName;
+        lesInfoBar[3] = cabinet;
+    }
     ////////////////////
     private Pattern goodSymb = Pattern.compile("^[A-ZА-Я][a-zа-яA-ZА-Я]{0,13}\\s?[a-zа-яА-ЯA-Z]{0,14}$");
     private Pattern goodSpace = Pattern.compile("^[a-zA-Zа-яА-Я]{1,15}\\s?[a-zA-Zа-яА-Я]*$");
@@ -264,15 +273,24 @@ public class ScheduleController implements Initializable {
                             tf.setText(Character.toUpperCase(newValue.charAt(0)) + newValue.substring(1));
                         }
                     }
-                    mainLesson.setText(lessons[focusedLessons[0]][focusedLessons[1]].getText());
-                    fullName.setPromptText(lessons[focusedLessons[0]][focusedLessons[1]].getText());
+                    mainLesson.setText(lessons[fLes[0]][fLes[1]].getText());
+                    fullName.setPromptText(lessons[fLes[0]][fLes[1]].getText());
                 }));
 
                 tf.focusedProperty().addListener(((observable, oldValue, newValue) -> {
                     if (newValue) {
                         focus(0);
-                        mainLesson.setText(lessons[focusedLessons[0]][focusedLessons[1]].getText());
-                        fullName.setPromptText(lessons[focusedLessons[0]][focusedLessons[1]].getText());
+                        mainLesson.setText(lessons[fLes[0]][fLes[1]].getText());
+                        fullName.setPromptText(lessons[fLes[0]][fLes[1]].getText());
+                    }
+                    else {
+                        focus(3);
+                        for (int j = 0; j < 4; j++) {
+                            if (lesInfoBar[j].isFocused()) {
+                                tf.setStyle(tf.getStyle() + "; -fx-border-width: 3px");
+                                return;
+                            }
+                        }
                     }
                 }));
             }
@@ -285,7 +303,7 @@ public class ScheduleController implements Initializable {
                         if (newValue.length() > 19) tf.setText(oldValue);
                         else if (!(m = badWeekSymb.matcher(newValue)).matches()) tf.setText(oldValue);
                         else if (!(m = goodWeek.matcher(newValue)).matches()) {
-                            tf.setStyle("-fx-border-color: red");
+                            if (!tf.getText().trim().isEmpty()) tf.setStyle("-fx-border-color: red");
                             //Attention block
                         } else {
                             //Analis
@@ -293,22 +311,45 @@ public class ScheduleController implements Initializable {
                             tf.setStyle("-fx-border-color: black");
                         }
                     } else tf.setStyle("-fx-border-color: black");
-                    mainLesson.setText(lessons[focusedLessons[0]][focusedLessons[1]].getText());
-                    fullName.setPromptText(lessons[focusedLessons[0]][focusedLessons[1]].getText());
+                    mainLesson.setText(lessons[fLes[0]][fLes[1]].getText());
+                    fullName.setPromptText(lessons[fLes[0]][fLes[1]].getText());
                 }));
 
                 tf.focusedProperty().addListener(((observable, oldValue, newValue) -> {
                     if (newValue) {
                         focus(1);
-                        mainLesson.setText(lessons[focusedLessons[0]][focusedLessons[1]].getText());
-                        fullName.setPromptText(lessons[focusedLessons[0]][focusedLessons[1]].getText());
+                        mainLesson.setText(lessons[fLes[0]][fLes[1]].getText());
+                        fullName.setPromptText(lessons[fLes[0]][fLes[1]].getText());
+                    } else {
+                        focus(3);
+                        for (int j = 0; j < 4; j++) {
+                            if (lesInfoBar[j].isFocused()) {
+                                if (tf.getStyle().equals("-fx-border-color: red")) tf.setStyle(tf.getStyle() + "; -fx-border-width: 3px");
+                                else tf.setStyle("-fx-border-width: 3px");
+                                return;
+                            }
+                        }
                     }
                 }));
             }
         }
+
+        for (int i = 0; i < 4; i++) {
+            lesInfoBar[i].focusedProperty().addListener(((observable, oldValue, newValue) -> {
+                if (!newValue) {
+                    for (int j = 0; j < 4; j++) {
+                        if (lesInfoBar[j].isFocused()) return;
+                    }
+                    System.out.println(lessons[fLes[0]][fLes[1]].getStyle());
+                    int num = fLes[0];
+                    if (lessons[fLes[0]][fLes[1]].getStyle().isEmpty()) num += 6;
+                    lessons[num][fLes[1]].setStyle(lessons[num][fLes[1]].getStyle().substring(0, lessons[num][fLes[1]].getStyle().length()-3) + "2px");
+                }
+            }));
+        }
     }
     ////////////////////
-    private int[] focusedLessons = new int[2];
+    private int[] fLes = new int[2];
 
     private void focus(int num) {
         //num == 0 -> lessons
@@ -318,22 +359,40 @@ public class ScheduleController implements Initializable {
         for (int i = i1; i < i2; i++) {
             for (int j = 0; j < 6; j++) {
                 if (lessons[i][j].isFocused()) {
-                    focusedLessons[0] = num == 0 ? i : i-6;
-                    focusedLessons[1] = j;
+                    fLes[0] = num == 0 ? i : i - 6;
+                    fLes[1] = j;
+                    return;
                 }
             }
-
         }
     }
     ////////////////////
+    //num == 1 -> 1st page
+    //num == 2 -> 2nd page
+    private void saveInfo(int num) {
+        lessonsInfo[num==1?0:1][fLes[0]][fLes[1]][0] = fullName.getText();
+        lessonsInfo[num==1?0:1][fLes[0]][fLes[1]][1] = typeOfLesson.getValue().toString();
+        lessonsInfo[num==1?0:1][fLes[0]][fLes[1]][2] = teacherName.getText();
+        lessonsInfo[num==1?0:1][fLes[0]][fLes[1]][3] = cabinet.getText();
+    }
+
+    private void loadInfo(int num) {
+        fullName.setText(lessonsInfo[num==1?0:1][fLes[0]][fLes[1]][0]);
+        typeOfLesson.setValue(lessonsInfo[num==1?0:1][fLes[0]][fLes[1]][1]==null?"Лекция":lessonsInfo[num==1?0:1][fLes[0]][fLes[1]][1]);
+        teacherName.setText(lessonsInfo[num==1?0:1][fLes[0]][fLes[1]][2]);
+        cabinet.setText(lessonsInfo[num==1?0:1][fLes[0]][fLes[1]][3]);
+    }
+    ////////////////////
+    //savelessons()
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        getLessonsArray();
+        getLessonsArrays();
         setListeners();
         typeOfLesson.setItems(FXCollections.observableArrayList("Лекция", "Практика", "Лабораторная"));
         typeOfLesson.setValue("Лекция");
-
+        lesson_0_0.requestFocus();
         //OK -> if all good
+        //RexEx for fullName and cabinet
     }
     //onclick
 }

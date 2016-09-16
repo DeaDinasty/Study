@@ -105,7 +105,7 @@
             </TextField>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="-" textAlignment="CENTER" wrappingWidth="8.2" GridPane.columnIndex="1">
                <GridPane.margin>
-                  <Insets left="90.0" />
+                  <Insets left="92.0" />
                </GridPane.margin>
                <font>
                   <Font size="19.0" />
@@ -113,7 +113,7 @@
             </Text>
             <TextField fx:id="les1_2" alignment="CENTER" promptText="10.35" GridPane.columnIndex="1">
                <GridPane.margin>
-                  <Insets left="100.0" right="5.0" />
+                  <Insets left="101.0" right="4.0" />
                </GridPane.margin>
             </TextField>
             <TextField fx:id="les2_1" alignment="CENTER" layoutX="81.0" layoutY="12.0" promptText="10.45" GridPane.columnIndex="1" GridPane.rowIndex="1">
@@ -126,12 +126,12 @@
                   <Font size="19.0" />
                </font>
                <GridPane.margin>
-                  <Insets left="90.0" />
+                  <Insets left="92.0" />
                </GridPane.margin>
             </Text>
             <TextField fx:id="les2_2" alignment="CENTER" layoutX="176.0" layoutY="12.0" promptText="12.20" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <GridPane.margin>
-                  <Insets left="100.0" right="5.0" />
+                  <Insets left="101.0" right="4.0" />
                </GridPane.margin>
             </TextField>
             <TextField fx:id="les3_1" alignment="CENTER" layoutX="81.0" layoutY="42.0" promptText="13.00" GridPane.columnIndex="1" GridPane.rowIndex="2">
@@ -144,12 +144,12 @@
                   <Font size="19.0" />
                </font>
                <GridPane.margin>
-                  <Insets left="90.0" />
+                  <Insets left="92.0" />
                </GridPane.margin>
             </Text>
             <TextField fx:id="les3_2" alignment="CENTER" layoutX="176.0" layoutY="42.0" promptText="14.35" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <GridPane.margin>
-                  <Insets left="100.0" right="5.0" />
+                  <Insets left="101.0" right="4.0" />
                </GridPane.margin>
             </TextField>
             <TextField fx:id="les4_1" alignment="CENTER" layoutX="81.0" layoutY="72.0" promptText="14.45" GridPane.columnIndex="1" GridPane.rowIndex="3">
@@ -162,12 +162,12 @@
                   <Font size="19.0" />
                </font>
                <GridPane.margin>
-                  <Insets left="90.0" />
+                  <Insets left="92.0" />
                </GridPane.margin>
             </Text>
             <TextField fx:id="les4_2" alignment="CENTER" layoutX="176.0" layoutY="72.0" promptText="16.20" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <GridPane.margin>
-                  <Insets left="100.0" right="5.0" />
+                  <Insets left="101.0" right="4.0" />
                </GridPane.margin>
             </TextField>
             <TextField fx:id="les5_1" alignment="CENTER" layoutX="81.0" layoutY="102.0" promptText="16.30" GridPane.columnIndex="1" GridPane.rowIndex="4">
@@ -180,12 +180,12 @@
                   <Font size="19.0" />
                </font>
                <GridPane.margin>
-                  <Insets left="90.0" />
+                  <Insets left="92.0" />
                </GridPane.margin>
             </Text>
             <TextField fx:id="les5_2" alignment="CENTER" layoutX="176.0" layoutY="102.0" promptText="18.05" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <GridPane.margin>
-                  <Insets left="100.0" right="5.0" />
+                  <Insets left="101.0" right="4.0" />
                </GridPane.margin>
             </TextField>
             <TextField fx:id="les6_1" alignment="CENTER" layoutX="80.0" layoutY="129.0" promptText="18.15" GridPane.columnIndex="1" GridPane.rowIndex="5">
@@ -198,12 +198,12 @@
                   <Font size="19.0" />
                </font>
                <GridPane.margin>
-                  <Insets left="90.0" />
+                  <Insets left="92.0" />
                </GridPane.margin>
             </Text>
             <TextField fx:id="les6_2" alignment="CENTER" layoutX="175.0" layoutY="129.0" promptText="19.50" GridPane.columnIndex="1" GridPane.rowIndex="5">
                <GridPane.margin>
-                  <Insets left="100.0" right="5.0" />
+                  <Insets left="101.0" right="4.0" />
                </GridPane.margin>
             </TextField>
             <TextField fx:id="les7_1" alignment="CENTER" layoutX="80.0" layoutY="159.0" promptText="20.00" GridPane.columnIndex="1" GridPane.rowIndex="6">
@@ -216,12 +216,12 @@
                   <Font size="19.0" />
                </font>
                <GridPane.margin>
-                  <Insets left="90.0" />
+                  <Insets left="92.0" />
                </GridPane.margin>
             </Text>
             <TextField fx:id="les7_2" alignment="CENTER" layoutX="175.0" layoutY="159.0" promptText="21.35" GridPane.columnIndex="1" GridPane.rowIndex="6">
                <GridPane.margin>
-                  <Insets left="100.0" right="5.0" />
+                  <Insets left="101.0" right="4.0" />
                </GridPane.margin>
             </TextField>
             <ImageView fx:id="lesImage1" fitHeight="31.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.valignment="CENTER">
